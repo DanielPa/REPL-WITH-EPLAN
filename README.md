@@ -28,7 +28,7 @@ So all you need to do is:
 The Script also brings an example method to open a EPLAN project. 
 Just `var myProject = GetProject("$(MD_PROJECTS)\MyProject.elk")`
 
-![Video](./media/csharp_interactive_eplan.mov)
+[![Video](https://img.youtube.com/vi/h3kXCovQbEg/hqdefault.jpg)](https://youtu.be/h3kXCovQbEg)
 
 | :warning: Make sure you close all project before you reset or close the C# Interactive Window |
 | --- |
