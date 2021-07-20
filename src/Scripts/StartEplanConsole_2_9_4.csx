@@ -30,6 +30,7 @@ if(!string.IsNullOrWhiteSpace(binPath))
 Project GetProject(string linkFile)
 {
   var prjManager = new ProjectManager();
+  prjManager.LockProjectByDefault = false;
   var substitutedLinkFile = PathMap.SubstitutePath(linkFile);
-  return prjManager.OpenProject(substitutedLinkFile, ProjectManager.OpenMode.Exclusive, true);
+  return prjManager.OpenProject(substitutedLinkFile, ProjectManager.OpenMode.Standard, true);
 }
