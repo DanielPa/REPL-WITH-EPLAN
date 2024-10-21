@@ -30,7 +30,7 @@ if(!string.IsNullOrWhiteSpace(binPath))
 
   eplan = new EplApplication();
   eplan.EplanBinFolder = @"C:\Program Files\EPLAN\Electric P8\2023.0.3\Bin";
-  eplan.SystemConfiguration = "Dev";
+  eplan.SystemConfiguration = "API";
   eplan.QuietMode = EplApplication.QuietModes.ShowAllDialogs;
   eplan.Init("", true, true);
   eplan.QuietMode = EplApplication.QuietModes.ShowNoDialogs;

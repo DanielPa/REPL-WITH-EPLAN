@@ -1,12 +1,12 @@
-#r "C:\Program Files\EPLAN\Platform\2024.0.1\Bin\Eplan.EplApi.Systemu.dll"
-#r "C:\Program Files\EPLAN\Platform\2024.0.1\Bin\Eplan.EplApi.Starteru.dll"
-#r "C:\Program Files\EPLAN\Platform\2024.0.1\Bin\Eplan.EplApi.AFu.dll"
-#r "C:\Program Files\EPLAN\Platform\2024.0.1\Bin\Eplan.EplApi.Baseu.dll"
-#r "C:\Program Files\EPLAN\Platform\2024.0.1\Bin\Eplan.EplApi.Guiu.dll"
-#r "C:\Program Files\EPLAN\Platform\2024.0.1\Bin\Eplan.EplApi.DataModelu.dll"
-#r "C:\Program Files\EPLAN\Platform\2024.0.1\Bin\Eplan.EplApi.MasterDatau.dll"
-#r "C:\Program Files\EPLAN\Platform\2024.0.1\Bin\Eplan.EplApi.EServicesu.dll"
-#r "C:\Program Files\EPLAN\Platform\2024.0.1\Bin\Eplan.EplApi.HEServicesu.dll"
+#r "C:\Program Files\EPLAN\Platform\2024.0.3\Bin\Eplan.EplApi.Systemu.dll"
+#r "C:\Program Files\EPLAN\Platform\2024.0.3\Bin\Eplan.EplApi.Starteru.dll"
+#r "C:\Program Files\EPLAN\Platform\2024.0.3\Bin\Eplan.EplApi.AFu.dll"
+#r "C:\Program Files\EPLAN\Platform\2024.0.3\Bin\Eplan.EplApi.Baseu.dll"
+#r "C:\Program Files\EPLAN\Platform\2024.0.3\Bin\Eplan.EplApi.Guiu.dll"
+#r "C:\Program Files\EPLAN\Platform\2024.0.3\Bin\Eplan.EplApi.DataModelu.dll"
+#r "C:\Program Files\EPLAN\Platform\2024.0.3\Bin\Eplan.EplApi.MasterDatau.dll"
+#r "C:\Program Files\EPLAN\Platform\2024.0.3\Bin\Eplan.EplApi.EServicesu.dll"
+#r "C:\Program Files\EPLAN\Platform\2024.0.3\Bin\Eplan.EplApi.HEServicesu.dll"
 
 using System;
 using System.IO;
@@ -18,7 +18,7 @@ using Eplan.EplApi.DataModel;
 
 var eplanFinder = new EplanFinder();
 
-string binPath = @"C:\Program Files\EPLAN\Platform\2024.0.1\Bin\";
+string binPath = @"C:\Program Files\EPLAN\Platform\2024.0.3\Bin\";
 EplApplication eplan;
 
 if(!string.IsNullOrWhiteSpace(binPath))
@@ -29,7 +29,8 @@ if(!string.IsNullOrWhiteSpace(binPath))
   resolver.PinToEplan();
 
   eplan = new EplApplication();
-  eplan.EplanBinFolder = @"C:\Program Files\EPLAN\Electric P8\2024.0.1\Bin";
+  eplan.EplanBinFolder = @"C:\Program Files\EPLAN\Electric P8\2024.0.3\Bin";
+  eplan.SystemConfiguration = "API";
   eplan.QuietMode = EplApplication.QuietModes.ShowAllDialogs;
   eplan.Init("", true, true);
   eplan.QuietMode = EplApplication.QuietModes.ShowNoDialogs;
